@@ -1,5 +1,7 @@
 import "/src/styles/left-section/eduPanel.css"
 import PropTypes from 'prop-types';
+import  fileIcon  from "/src/assets/icons/fileIcon.svg"
+import  deleteIcon  from "/src/assets/icons/delete.svg"
 export function EduCard({ onClick, expPoints, index, handleDeleteItem, eduCard}) {
     const { jobTitle, start, end, location } = expPoints[index].cardData;
     const expPointID = expPoints[index].id
@@ -9,7 +11,7 @@ export function EduCard({ onClick, expPoints, index, handleDeleteItem, eduCard})
         <div className="cardParent">
        <div className="file-title" onClick={onClick}>    
                 <div className="fileIcon">
-                    <img src="/src/assets/icons/fileIcon.svg" alt="Education file" />
+                    <img src={fileIcon} alt="Education file" />
                 </div>
                 
                 <div className="title-period">
@@ -18,7 +20,7 @@ export function EduCard({ onClick, expPoints, index, handleDeleteItem, eduCard})
             </div>
         </div>
             <button onClick={() => handleDeleteItem(expPointID, eduCardID)} className="delButton">
-                <img className="delete" src="src/assets/icons/delete.svg" alt="deleteIcon" />
+                <img className="delete" src={deleteIcon} alt="deleteIcon" />
             </button>
         </div>        
     )
@@ -31,12 +33,4 @@ EduCard.propTypes = {
     handleDeleteItem: PropTypes.func.isRequired,
     eduCard: PropTypes.array.isRequired,
 
-};
-
-EduCard.defaultProps = {
-    onClick: () => {},
-    expPoints: [],
-    index: 0, 
-    handleDeleteItem: () => {}, // Default empty function for handleDeleteItem
-    eduCard: [], 
 };

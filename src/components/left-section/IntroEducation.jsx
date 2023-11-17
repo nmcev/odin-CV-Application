@@ -1,6 +1,6 @@
 import "/src/styles/left-section/eduCard.css"
 import PropTypes from 'prop-types';
-
+import addCircle from "/src/assets/icons/addCircle.svg"
 export function IntroEdu({ text ,onClick, addPoint}) {
 
     
@@ -10,7 +10,7 @@ export function IntroEdu({ text ,onClick, addPoint}) {
                 onClick();
                 addPoint();
             }}  >
-                <img src="/src/assets/icons/addCircle.svg" alt="" />
+                <img src={addCircle} alt="" />
                 Add {text || "Experience"}
                 
             </button>

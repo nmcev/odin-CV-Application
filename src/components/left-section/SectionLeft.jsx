@@ -8,6 +8,7 @@ import "/src/styles/left-section/sectionLeft.css";
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
+import arrow from "/src/assets/icons/arrow.svg"
 
 export function SectionLeft({
     data, setData,
@@ -61,7 +62,7 @@ export function SectionLeft({
             <div className='closeAndOpen' >
                 <h2 className='title'>Personal Details</h2>
                 <button className={isPersonalOpen ? 'arrow-down' : 'arrow-up'} onClick={() => setIsPersonalOpen(!isPersonalOpen)}>
-                    <img src="/src/assets/icons/arrow.svg" alt="closing icon" />
+                    <img src={arrow} alt="closing icon" />
                 </button>
             </div>
    
@@ -74,7 +75,7 @@ export function SectionLeft({
            <div className="closeAndOpen">
                    <h2 className="title">Practical Experience</h2>
                    <button className={isPracticalExpOpen ? 'arrow-down': 'arrow-up'} onClick={() => setIsPracticalExpOpen(!isPracticalExpOpen) }>
-                       <img src="/src/assets/icons/arrow.svg" alt="closing icon" />
+                       <img src={arrow} alt="closing icon" />
                     </button>
                 </div>
                 {isPracticalExpOpen && (
@@ -115,7 +116,7 @@ export function SectionLeft({
             <div className='closeAndOpen' >
                 <h2 className="title">Educational Experience</h2>
                 <button className={isOpen ? 'arrow-down' : 'arrow-up'} onClick={() => setIsOpen(!isOpen)}>
-                    <img src="/src/assets/icons/arrow.svg" alt="" />
+                    <img src={arrow} alt="" />
                 </button>
                 
             </div>

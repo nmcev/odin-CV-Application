@@ -1,5 +1,8 @@
 import "/src/styles/left-section/eduPanel.css"
 import PropTypes from 'prop-types'
+import  fileIcon  from "/src/assets/icons/fileIcon.svg";
+import  deleteIcon  from "/src/assets/icons/delete.svg"
+
 export function PracticalCard({onClick = ()=> {}, handleDeletePracticalItem,practicalCards, practicalPoints, index}) {
     const practicalCardID = practicalCards[index].id;
     const practicalPointID = practicalPoints[index].id;
@@ -8,7 +11,7 @@ export function PracticalCard({onClick = ()=> {}, handleDeletePracticalItem,prac
     <div className="cardParent">
        <div className="file-title" onClick={onClick}>    
                 <div className="fileIcon">
-                    <img src="/src/assets/icons/fileIcon.svg" alt="Education file" />
+                    <img src={fileIcon} alt="Education file" />
                 </div>
                 
                 <div className="title-period">
@@ -19,7 +22,7 @@ export function PracticalCard({onClick = ()=> {}, handleDeletePracticalItem,prac
             </div>
         </div>
             <button className="delButton" onClick={() => handleDeletePracticalItem(practicalPointID, practicalCardID )}>
-                <img className="delete" src="src/assets/icons/delete.svg" alt="deleteIcon" />
+                <img className="delete" src={deleteIcon} alt="deleteIcon" />
             </button>
         </div>        
     )

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import dotIcon from "/src/assets/icons/dot.svg"
 
 export function PracticalPoint({ practicalData }) {
     return (        
      <div className='exp-info'>
         <div className='topSection'>
           <div className='jobTitle-company'>
-            <img src="/src/assets/icons/dot.svg" alt="" />
+          <img src={dotIcon} alt="" />
                     <p className='jobTitle'>{practicalData.jobTitle || "Software Engineer"} &nbsp;-&nbsp;{
                         practicalData.companyName || "Google"} / {practicalData.location || "USA"}
                     </p>

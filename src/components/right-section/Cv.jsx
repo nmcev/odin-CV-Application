@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import '/src/styles/right-section/cv.css';
 import { ExperiencePoint } from "./ExpPoint.jsx";
 import { PracticalPoint } from './PracticalPoint.jsx';
-
+import  phoneIcon  from "/src/assets/icons/phone.svg"
+import emailIcon  from "/src/assets/icons/email.svg"
 export default function CvTemplate({ data, expPoints, practicalPoints}) {
     return (
         <div className="cv-template">
@@ -20,12 +21,12 @@ export default function CvTemplate({ data, expPoints, practicalPoints}) {
                     {data.phoneNumber ? (
                              <>
                                <a href={`tel:${data.phoneNumber}`}>{data.phoneNumber}</a>
-                               <img src="../src/assets/icons/phone.svg" alt="phone icon" />
+                                <img src={phoneIcon} alt="phone icon" />
                              </>
                            ) : (
                              <>
                                <a href="tel:+1-202-555-0104">+1-202-555-0104</a>
-                               <img src="../src/assets/icons/phone.svg" alt="phone icon" />
+                               <img src={phoneIcon} alt="phone icon" />
                              </>
                            )}
                           </p>
@@ -35,14 +36,14 @@ export default function CvTemplate({ data, expPoints, practicalPoints}) {
 
                             <>
                                 <a href={`mailto:${data.email}`}>{data.email}</a>
-                                <img src="../src/assets/icons/email.svg" alt="email icon" />
+                                <img src={emailIcon} alt="email icon" />
                             </>
                         ) : (
                                 <>
                                     <a href="mailto: jhonPersonal@doe.com">
                                     jhonPersonal@doe.com
                                     </a>
-                                    <img src="../src/assets/icons/email.svg" alt="email icon" />
+                                    <img src={emailIcon} alt="email icon" />
                                 </>
                             )}
                           </p>
