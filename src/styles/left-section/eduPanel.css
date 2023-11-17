@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'quickSand';
+    src: url('/src/assets/Quicksand-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Gabrito';
+    src: url('/src/assets/Gabarito/Gabarito-VariableFont_wght.ttf');
+}
+
+.cardParent{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    justify-content: space-between;
+    margin-left: 5rem;
+}
+.eduPanel{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 90%;
+    padding: .5rem;
+    border-radius: 10px;
+    align-items: center;
+}
+.cardParent:hover{
+    background-color: #83838323;
+    transition: 0.5s;
+}
+
+.fileIcon{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(200, 200, 200, 0.359);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.exp{
+    font-family: 'Gabrito', sans-serif !important;
+    margin: 0 ;
+}
+.title-period .period{
+    margin: 0 !important;
+    font-family: 'quickSand', sans-serif !important;
+    font-size: 0.89rem;
+    color: #838383;
+    font-family:serif;
+}
+
+.delButton {
+    width: 47.5px;
+    height: 47.5px;
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-self: flex-end;
+    border: none;
+    background-color: transparent;
+}
+
+.delButton:hover{
+    background-color: #f25454d2;
+    transition: 0.5s;
+}
+

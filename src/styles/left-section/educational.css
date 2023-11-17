@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Gabarito';
+    src: url('/src/assets/static/WorkSans-Light.ttf');
+}
+.title {
+    font-size: 1rem;
+    color: #838383;
+}
+
+.educational-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 5rem;
+}
+
+.company {
+    width: 15.3rem;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-container input{
+    font-family: 'Gabarito', sans-serif;
+}
+.job-company {
+    display: flex;
+    gap: 3rem;
+}
+
+#companyName {
+    width: 135%;
+}
+
+.job,
+.company {
+    display: flex;
+    flex-direction: column;
+}
+
+.period-location {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 15px;
+    gap: 3rem;
+}
+
+input {
+    border: 1px solid rgb(226, 226, 226);
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: calc(1rem + 1px);
+    font-size: .9rem;
+    color: #191919;
+    outline: none;
+}
+
+.leftSection {
+    position: relative;
+    display: flex;
+    gap: .8rem;
+}
+
+.leftSection input {
+    width: 25%;
+}
+
+
+.description textarea {
+    border: 1px solid rgb(226, 226, 226);
+    outline: none;
+    display: flex;
+    padding: calc(1rem + 1px);
+    color: #838383;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: 'Gabarito','Courier New', Courier, monospace,runda;
+}
+
+.rightArrow {
+    width: 16px;
+}
