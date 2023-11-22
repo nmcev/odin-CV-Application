@@ -12,6 +12,8 @@ function App() {
     email: "",
     phoneNumber: "",
     address: "",
+    linkedin: "",
+    linkedURL: "",
   });
 
   const [eduCard, setEduCard] = useState([{ id: uuidv4() }]);
