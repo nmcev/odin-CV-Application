@@ -1,8 +1,11 @@
 import '/src/styles/left-section/personalDetails.css' 
 import PropTypes from 'prop-types';
-
+import { IntroEdu } from "./IntroEducation";
+import { useState } from 'react';
 export function PersonalDetails({data, setData}) {
 
+    const [toggleLinkedin, setToggleLinkedin] = useState(false);
+    const toggleLinkedinAccount = () => { setToggleLinkedin(!toggleLinkedin) }
     return (
         <div className='main'>
                 <div className='form-container'>
@@ -76,7 +79,32 @@ export function PersonalDetails({data, setData}) {
     </form>
     </div>  
        
-             
+            <IntroEdu text='Linkedin Account' onClick={toggleLinkedinAccount} />
+            {toggleLinkedin &&
+            <div className='linkedinForm'>
+                <div className="input-group-name input-group" >
+                    <label htmlFor="linkedin">Linkedin username</label>
+                    <input type="text"
+                        id="linkedin"
+                        placeholder="Your Linkedin"
+                        value={data.linkedin}
+                        onChange={(e) => setData({ ...data,linkedin: e.target.value })}
+                    />
+                    </div>
+                    
+                    <div className="input-group-name input-group" >
+
+                    <label htmlFor="linkedinURL">Linkedin URL</label>
+                    <input type="text"
+                        id="linkedinURL"
+                        placeholder="Your Linkedin URL"
+                        value={data.linkedinURL}
+                        onChange={(e) => setData({ ...data,linkedinURL: e.target.value })}
+                    />
+
+                </div>
+            </div>        
+         }
    </div>
   )
     
