@@ -136,3 +136,17 @@ h1 {
     /* make a bottom border */
     padding-bottom: .3rem;
 }
+
+.linkedin{
+    font-size: .7rem;
+    color: #3d3a3a;
+    display: flex;
+    align-items: center;
+}
+
+.linkedinImage{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    transform: rotate(-45deg);
+}
