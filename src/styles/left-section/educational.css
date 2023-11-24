@@ -82,7 +82,7 @@ input {
     height: 100%;
     border-radius: 5px;
     resize: vertical;
-    font-family: 'Gabarito','Courier New', Courier, monospace,runda;
+    font-family: 'Gabarito',sans-serif;
 }
 
 .rightArrow {
