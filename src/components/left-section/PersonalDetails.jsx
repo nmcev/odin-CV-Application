@@ -1,10 +1,8 @@
 import '/src/styles/left-section/personalDetails.css' 
 import PropTypes from 'prop-types';
 import { IntroEdu } from "./IntroEducation";
-import { useState } from 'react';
-export function PersonalDetails({data, setData}) {
+export function PersonalDetails({data, setData, toggleLinkedin, setToggleLinkedin}) {
 
-    const [toggleLinkedin, setToggleLinkedin] = useState(false);
     const toggleLinkedinAccount = () => { setToggleLinkedin(!toggleLinkedin) }
     return (
         <div className='main'>
@@ -111,5 +109,7 @@ export function PersonalDetails({data, setData}) {
 }
 PersonalDetails.propTypes = {
     data: PropTypes.object.isRequired,
-    setData: PropTypes.func.isRequired
+    setData: PropTypes.func.isRequired,
+    toggleLinkedin: PropTypes.bool,
+    setToggleLinkedin: PropTypes.func,
 }
