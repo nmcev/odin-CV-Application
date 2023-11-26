@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import '/src/styles/mainView.css'
 function App() {
 
+  const [toggleLinkedin, setToggleLinkedin] = useState(false);
   const [data, setData] = useState({
     firstName: "",
     lastName: "",
@@ -80,6 +81,9 @@ function App() {
         setPracticalCards={setPracticalCards}
         handleDeletePracticalItem={handleDeletePracticalItem}
         updatePracticalData={updatePracticalData}
+        toggleLinkedin={toggleLinkedin}
+        setToggleLinkedin={setToggleLinkedin}
+        
 
       />
     
@@ -87,6 +91,7 @@ function App() {
         data={data}
         expPoints={expPoints}
         practicalPoints={practicalPoints}
+        toggleLinkedin={toggleLinkedin}
       />
    </div>
   )
