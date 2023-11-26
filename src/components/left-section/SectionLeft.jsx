@@ -19,7 +19,8 @@ export function SectionLeft({
     addPracticalPoint,
     practicalCards, setPracticalCards,
     handleDeletePracticalItem,
-    updatePracticalData
+    updatePracticalData,
+    toggleLinkedin, setToggleLinkedin,
 }) {
     const [isPersonalOpen, setIsPersonalOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -67,7 +68,7 @@ export function SectionLeft({
             </div>
    
                 
-            { isPersonalOpen && <PersonalDetails data={data} setData={setData}/>}
+            { isPersonalOpen && <PersonalDetails data={data} setData={setData} toggleLinkedin={toggleLinkedin} setToggleLinkedin={setToggleLinkedin}/>}
             </div>
 
             {/* Practical Experience */}
@@ -169,6 +170,8 @@ SectionLeft.propTypes = {
     practicalCards: PropTypes.array.isRequired,
     setPracticalCards: PropTypes.func.isRequired,
     handleDeletePracticalItem: PropTypes.func.isRequired,
-    updatePracticalData:PropTypes.func.isRequired,
+    updatePracticalData: PropTypes.func.isRequired,
+    toggleLinkedin: PropTypes.bool,
+    setToggleLinkedin: PropTypes.func,
 };
 
