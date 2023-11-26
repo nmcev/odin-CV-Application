@@ -5,7 +5,7 @@ import { PracticalPoint } from './PracticalPoint.jsx';
 import  phoneIcon  from "/src/assets/icons/phone.svg"
 import emailIcon  from "/src/assets/icons/email.svg"
 import link from "/src/assets/icons/link.svg"
-export default function CvTemplate({ data, expPoints, practicalPoints }) {
+export default function CvTemplate({ data, expPoints, practicalPoints, toggleLinkedin }) {
     console.log(data)
     return (
         <div className="cv-template">
@@ -14,7 +14,7 @@ export default function CvTemplate({ data, expPoints, practicalPoints }) {
               <div className='header-left'>
                     <h1 className='name'>{data.firstName ||"John"} {data.lastName || "Doe"}</h1>
                     <p className='jobTitle'>{data.jobTitle || "Software Engineer"}</p>
-                    <a className='linkedin' href={data.linkedinURL || "https://www.linkedin.com/company/john-doe/?originalSubdomain=uk"}><img className='linkedinImage' src={link} alt="" />{data.linkedin ||"John Doe"}</a>
+                    {toggleLinkedin && <a className='linkedin' href={data.linkedinURL || "https://www.linkedin.com/company/john-doe/?originalSubdomain=uk"}><img className='linkedinImage' src={link} alt="" />{data.linkedin ||"John Doe"} </a> }
                 </div>
 
                 <div className='header-right'>
