@@ -89,12 +89,10 @@ label {
     gap: .5rem;
     min-width: 50%;
     background-color: #f5f5f5;
-    padding: 10px 0;
+    height: 30px;
     font-size: 12px;
     color: #838383;
     text-decoration: none;
 }
 
-.copyRight-container > p , a {
-    
-}
+
