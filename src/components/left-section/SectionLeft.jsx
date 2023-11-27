@@ -9,6 +9,8 @@ import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import arrow from "/src/assets/icons/arrow.svg"
+import github from "/src/assets/icons/github.svg"
+
 
 export function SectionLeft({
     data, setData,
@@ -151,7 +153,14 @@ export function SectionLeft({
                 )}
                 
 
-        </div>
+            </div>
+            
+            <footer className="copyRight-container">
+                <p>built by muha</p>
+                <a href="https://github.com/nmcev">
+                    <img src={github} alt="" />
+                </a>
+            </footer>
     </div>     
     );
 }
