@@ -24,7 +24,7 @@ export function SectionLeft({
     updatePracticalData,
     toggleLinkedin, setToggleLinkedin,
 }) {
-    const [isPersonalOpen, setIsPersonalOpen] = useState(false);
+    const [isPersonalOpen, setIsPersonalOpen] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
     const [isPracticalExpOpen, setIsPracticalExpOpen] = useState(false);
     const [selectedEduCardIds, setSelectedEduCardIds] = useState([]);
